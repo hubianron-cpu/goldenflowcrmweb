@@ -1,0 +1,8 @@
+⨯ Another next dev server is already running.
+
+- Local:        http://localhost:3000
+- PID:          23108
+- Dir:          C:\Users\Ron\OneDrive\מסמכים\אתר רשמי goldenflowcrm\goldenflow-official-site
+- Log:          .next\dev\logs\next-development.log
+
+Run taskkill /PID 23108 /F to stop it.
