@@ -65,7 +65,7 @@ summary:focus-visible {
 
 @media (max-width: 767px) {
   body {
-    padding-bottom: 5.75rem;
+    padding-bottom: calc(5.75rem + env(safe-area-inset-bottom));
   }
 }
 

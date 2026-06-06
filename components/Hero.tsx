@@ -43,9 +43,9 @@ export function Hero() {
     >
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.028)_1px,transparent_1px)] bg-[size:72px_72px] opacity-30" />
       <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-l from-transparent via-gold-300/30 to-transparent" />
-      <div className="container-shell relative grid min-h-[calc(100vh-8rem)] items-start gap-10 py-10 lg:grid-cols-[1.02fr_.98fr] lg:gap-12 lg:pb-12 lg:pt-14">
-        <div className="max-w-3xl lg:pt-2">
-          <div className="eyebrow">
+      <div className="container-shell relative grid min-h-[calc(100vh-8rem)] items-start gap-10 pb-28 pt-10 lg:grid-cols-[1.02fr_.98fr] lg:items-center lg:gap-12 lg:pb-12 lg:pt-14">
+        <div className="mx-auto max-w-3xl text-center lg:mx-0 lg:pt-2 lg:text-right">
+          <div className="eyebrow mx-auto justify-center text-center lg:mx-0">
             <Image
               src="/brand/goldenflow-icon-gold.png"
               alt="GoldenFlow"
@@ -57,35 +57,35 @@ export function Hero() {
             />
             CRM חכם למאמנים, יועצים ונותני שירות
           </div>
-          <h1 className="text-4xl font-black leading-[1.08] text-white sm:text-5xl lg:text-7xl">
+          <h1 className="text-3xl font-black leading-[1.12] text-white sm:text-5xl lg:max-w-[42rem] lg:text-6xl lg:leading-[1.08] xl:max-w-3xl 2xl:text-7xl">
             הלידים שלך לא נעלמים. הם פשוט צריכים ניהול נכון.
           </h1>
-          <p className="mt-6 text-lg leading-8 text-zinc-300 sm:text-xl">
+          <p className="mx-auto mt-6 text-base leading-8 text-zinc-300 sm:text-xl lg:mx-0">
             GoldenFlow CRM מרכזת את הלידים, המשימות ותהליך המכירה שלך במקום אחד -
             ומראה לך בכל יום למי כדאי לפנות, מה הפעולה הבאה ואיפה הכסף מחכה לטיפול.
           </p>
-          <div className="mt-6 grid max-w-2xl gap-3 sm:grid-cols-3">
+          <div className="mx-auto mt-6 grid max-w-md gap-3 sm:max-w-2xl sm:grid-cols-3 lg:mx-0">
             {["סדר יומי ברור", "מעקב אחרי כל ליד", "החלטות לפי נתונים"].map((item) => (
-              <div key={item} className="flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3 py-2 text-sm font-semibold text-zinc-200">
+              <div key={item} className="flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3 py-2 text-center text-sm font-semibold text-zinc-200">
                 <CheckCircle2 className="shrink-0 text-gold-300" size={16} aria-hidden="true" />
                 {item}
               </div>
             ))}
           </div>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a href={APP_LOGIN_URL} className="gold-button">
+          <div className="mx-auto mt-8 grid max-w-md gap-4 sm:flex sm:max-w-none sm:flex-row sm:gap-3 lg:mx-0">
+            <a href={APP_LOGIN_URL} className="gold-button w-full sm:w-auto">
               {primaryCta}
               <ArrowLeft size={18} aria-hidden="true" />
             </a>
-            <a href={APP_LOGIN_URL} className="ghost-button">
+            <a href={APP_LOGIN_URL} className="ghost-button w-full sm:w-auto">
               <LogIn size={18} aria-hidden="true" />
               התחברות למערכת
             </a>
           </div>
-          <p className="microcopy mt-5 max-w-2xl">
+          <p className="microcopy mx-auto mt-6 max-w-md text-center lg:mx-0 lg:text-right">
             בלי התחייבות - רק להבין אם זה מתאים לעסק שלך.
           </p>
-          <div className="mt-6 max-w-xl rounded-2xl border border-gold-300/20 bg-[#111111]/78 p-5 shadow-[0_22px_70px_rgba(0,0,0,0.34),0_0_34px_rgba(212,175,55,0.08)] backdrop-blur sm:p-6 lg:mx-auto">
+          <div className="mx-auto mt-6 max-w-xl rounded-2xl border border-gold-300/20 bg-[#111111]/78 p-5 text-right shadow-[0_22px_70px_rgba(0,0,0,0.34),0_0_34px_rgba(212,175,55,0.08)] backdrop-blur sm:p-6 lg:mx-auto">
             <h2 className="text-base font-black text-white sm:text-lg">
               מה קורה אחרי שתשלח הודעה?
             </h2>
@@ -127,7 +127,7 @@ export function Hero() {
               </span>
             </div>
 
-            <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
               {metrics.map((metric) => (
                 <div key={metric.label} className="metric-card">
                   <p className={`text-3xl font-black ${metric.tone}`}>{metric.value}</p>
@@ -198,27 +198,29 @@ export function Hero() {
               </div>
             </div>
 
-            <div className="mt-4 premium-surface p-4">
-              <div className="mb-2 flex items-center justify-between text-sm">
-                <span className="font-bold text-white">התקדמות לסגירה</span>
-                <span className="text-gold-300">68%</span>
-              </div>
-              <div className="progress-track">
-                <div className="progress-fill w-[68%]" />
-              </div>
-            </div>
-
-            <div className="mt-4 grid gap-2 premium-surface p-4">
-              <div className="flex items-center justify-between">
-                <span className="text-sm font-bold text-white">משימות להיום</span>
-                <span className="text-xs font-bold text-gold-300">8 פתוחות</span>
-              </div>
-              {["לחזור לליד חם #01", "לשלוח הודעה למתעניין מקמפיין", "לקבוע שיחה עם מתעניין חדש"].map((task) => (
-                <div key={task} className="flex items-center gap-2 text-sm text-zinc-300">
-                  <span className="h-2 w-2 rounded-full bg-gold-300" />
-                  {task}
+            <div className="mt-4 grid gap-4 lg:grid-cols-[.72fr_1fr]">
+              <div className="premium-surface p-4">
+                <div className="mb-2 flex items-center justify-between text-sm">
+                  <span className="font-bold text-white">התקדמות לסגירה</span>
+                  <span className="text-gold-300">68%</span>
                 </div>
-              ))}
+                <div className="progress-track">
+                  <div className="progress-fill w-[68%]" />
+                </div>
+              </div>
+
+              <div className="grid gap-2 premium-surface p-4">
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-bold text-white">משימות להיום</span>
+                  <span className="text-xs font-bold text-gold-300">8 פתוחות</span>
+                </div>
+                {["לחזור לליד חם #01", "לשלוח הודעה למתעניין מקמפיין", "לקבוע שיחה עם מתעניין חדש"].map((task) => (
+                  <div key={task} className="flex items-center gap-2 text-sm text-zinc-300">
+                    <span className="h-2 w-2 rounded-full bg-gold-300" />
+                    {task}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

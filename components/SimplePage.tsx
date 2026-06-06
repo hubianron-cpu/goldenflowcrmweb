@@ -55,9 +55,9 @@ export function PageHero({
   description: string;
 }) {
   return (
-    <div className="mx-auto max-w-4xl">
+    <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
       <span className="eyebrow">{eyebrow}</span>
-      <h1 className="mt-4 text-4xl font-black leading-tight text-white sm:text-5xl lg:text-6xl">
+      <h1 className="mt-4 max-w-4xl text-4xl font-black leading-tight text-white sm:text-5xl xl:text-6xl">
         {title}
       </h1>
       <p className="mt-6 max-w-3xl text-lg leading-8 text-zinc-300 sm:text-xl">
