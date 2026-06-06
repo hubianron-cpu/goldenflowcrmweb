@@ -7,6 +7,7 @@ import {
   TrendingUp,
 } from "lucide-react";
 import { APP_LOGIN_URL, primaryCta } from "@/lib/constants";
+import { VideoFrame } from "@/components/VideoFrame";
 
 const metrics = [
   { label: "לידים לטיפול היום", value: "6", tone: "text-gold-300" },
@@ -42,8 +43,15 @@ export function Hero() {
       }}
     >
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.028)_1px,transparent_1px)] bg-[size:72px_72px] opacity-30" />
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(circle at 68% 42%, rgba(0,0,0,0.74), rgba(0,0,0,0.5) 34%, rgba(0,0,0,0.2) 64%, transparent 100%), linear-gradient(90deg, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.36) 48%, rgba(0,0,0,0.66) 100%)",
+        }}
+      />
       <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-l from-transparent via-gold-300/30 to-transparent" />
-      <div className="container-shell relative grid min-h-[calc(100vh-8rem)] items-start gap-10 pb-28 pt-10 lg:grid-cols-[1.02fr_.98fr] lg:items-center lg:gap-12 lg:pb-12 lg:pt-14">
+      <div className="container-shell relative z-10 grid min-h-[calc(100vh-8rem)] items-start gap-10 pb-28 pt-10 lg:grid-cols-[1.02fr_.98fr] lg:items-center lg:gap-12 lg:pb-12 lg:pt-14">
         <div className="mx-auto max-w-3xl text-center lg:mx-0 lg:pt-2 lg:text-right">
           <div className="eyebrow mx-auto justify-center text-center lg:mx-0">
             <Image
@@ -57,7 +65,10 @@ export function Hero() {
             />
             CRM חכם למאמנים, יועצים ונותני שירות
           </div>
-          <h1 className="text-3xl font-black leading-[1.12] text-white sm:text-5xl lg:max-w-[42rem] lg:text-6xl lg:leading-[1.08] xl:max-w-3xl 2xl:text-7xl">
+          <h1
+            className="text-3xl font-black leading-[1.12] text-white sm:text-5xl lg:max-w-[42rem] lg:text-6xl lg:leading-[1.08] xl:max-w-3xl 2xl:text-7xl"
+            style={{ textShadow: "0 8px 40px rgba(0,0,0,0.58)" }}
+          >
             הלידים שלך לא נעלמים. הם פשוט צריכים ניהול נכון.
           </h1>
           <p className="mx-auto mt-6 text-base leading-8 text-zinc-300 sm:text-xl lg:mx-0">
@@ -85,6 +96,12 @@ export function Hero() {
           <p className="microcopy mx-auto mt-6 max-w-md text-center lg:mx-0 lg:text-right">
             בלי התחייבות - רק להבין אם זה מתאים לעסק שלך.
           </p>
+          <VideoFrame
+            src="/videos/goldenflow-daily-closing.mp4"
+            title="GoldenFlowCRM daily closing video"
+            placement="hero"
+            className="mt-7 lg:mx-auto"
+          />
           <div className="mx-auto mt-6 max-w-xl rounded-2xl border border-gold-300/20 bg-[#111111]/78 p-5 text-right shadow-[0_22px_70px_rgba(0,0,0,0.34),0_0_34px_rgba(212,175,55,0.08)] backdrop-blur sm:p-6 lg:mx-auto">
             <h2 className="text-base font-black text-white sm:text-lg">
               מה קורה אחרי שתשלח הודעה?

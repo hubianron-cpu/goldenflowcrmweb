@@ -39,6 +39,68 @@ export type LeadFollowupCopy = {
   };
 };
 
+export type DailyClosingActionCopy = {
+  title: string;
+  subtitle: string;
+};
+
+export type DailyClosingCopy = {
+  scene1: {
+    headline: string;
+  };
+  scene2: {
+    headline: string;
+  };
+  scene3: {
+    headline: string;
+    support: string;
+    actions: DailyClosingActionCopy[];
+  };
+  scene4: {
+    headline: string;
+  };
+  scene5: {
+    headline: string;
+    cta: string;
+    support: string;
+  };
+};
+
+export const DAILY_CLOSING_COPY: DailyClosingCopy = {
+  scene1: {
+    headline: 'פותח את היום ולא יודע למי לחזור?',
+  },
+  scene2: {
+    headline: 'GoldenFlow מסדרת לך את היום.',
+  },
+  scene3: {
+    headline: 'מצב סגירה יומי',
+    support: 'כל מה שצריך לקדם - במקום אחד',
+    actions: [
+      {
+        title: 'לידים לטיפול היום',
+        subtitle: 'מי מחכה לפולואפ',
+      },
+      {
+        title: 'משימות פתוחות',
+        subtitle: 'מה חייב לקרות היום',
+      },
+      {
+        title: 'עסקאות לקידום',
+        subtitle: 'איפה יש כסף שצריך להזיז',
+      },
+    ],
+  },
+  scene4: {
+    headline: 'במקום לנחש - אתה פשוט פועל.',
+  },
+  scene5: {
+    headline: 'נסה את GoldenFlowCRM',
+    cta: '14 יום ללא עלות',
+    support: 'כל יום מתחיל בפעולה ברורה',
+  },
+};
+
 // Edit copy here when creating future Remotion versions.
 export const LEAD_FOLLOWUP_AD_COPY: LeadFollowupCopy = {
   brand: 'GoldenFlowCRM',

@@ -10,6 +10,7 @@ import {
   Target,
 } from "lucide-react";
 import { APP_LOGIN_URL } from "@/lib/constants";
+import { VideoFrame } from "@/components/VideoFrame";
 
 const features = [
   { title: "ניהול לידים", icon: LayoutDashboard },
@@ -40,6 +41,26 @@ export function HomeProblemPreview() {
             לידים, משימות ומעקבים שמתפזרים בין כלים שונים מקשים להבין למי
             לחזור היום ומה הפעולה הבאה שצריכה לקרות.
           </p>
+        </div>
+        <div className="mt-10 grid gap-8 lg:grid-cols-[1fr_390px] lg:items-center">
+          <div className="premium-card text-right">
+            <h3 className="text-2xl font-black leading-tight text-white sm:text-3xl">
+              הלידים לא נעלמים. הם פשוט מחכים לפולואפ.
+            </h3>
+            <p className="mt-4 text-base leading-8 text-zinc-300 sm:text-lg">
+              GoldenFlowCRM עושה לך סדר ומראה בכל יום עם מי לדבר, מה הפעולה הבאה, ואיפה יש כסף שצריך לקדם.
+            </p>
+            <a href={APP_LOGIN_URL} className="gold-button mt-7 w-full sm:w-auto">
+              לקבלת 14 יום ללא עלות
+              <ArrowLeft size={18} aria-hidden="true" />
+            </a>
+          </div>
+          <VideoFrame
+            src="/videos/goldenflow-lead-followup-ad.mp4"
+            title="GoldenFlowCRM lead follow-up video"
+            placement="section"
+            className="lg:mx-0"
+          />
         </div>
       </div>
     </section>
