@@ -48,7 +48,14 @@ export function HomeProblemPreview() {
 
 export function HomeSolutionPreview() {
   return (
-    <section id="how-it-works" className="section-pad">
+    <section
+      id="how-it-works"
+      className="section-pad bg-ink-950 bg-cover bg-center"
+      style={{
+        backgroundImage:
+          "linear-gradient(90deg, rgba(0,0,0,0.78), rgba(0,0,0,0.55)), url('/goldenflow-hero-bg.png')",
+      }}
+    >
       <div className="container-shell">
         <div className="grid gap-8 lg:grid-cols-[.9fr_1.1fr] lg:items-center">
           <div>

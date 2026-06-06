@@ -33,7 +33,14 @@ const contactSteps = [
 
 export function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden bg-gold-radial">
+    <section
+      id="top"
+      className="relative overflow-hidden bg-ink-950 bg-cover bg-center"
+      style={{
+        backgroundImage:
+          "linear-gradient(90deg, rgba(0,0,0,0.82), rgba(0,0,0,0.45), rgba(0,0,0,0.2)), url('/goldenflow-hero-main-bg.png')",
+      }}
+    >
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.028)_1px,transparent_1px)] bg-[size:72px_72px] opacity-30" />
       <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-l from-transparent via-gold-300/30 to-transparent" />
       <div className="container-shell relative grid min-h-[calc(100vh-8rem)] items-start gap-10 py-10 lg:grid-cols-[1.02fr_.98fr] lg:gap-12 lg:pb-12 lg:pt-14">
