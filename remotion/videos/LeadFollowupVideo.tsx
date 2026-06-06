@@ -52,7 +52,7 @@ const SceneOne = ({copy, mode}: {copy: LeadFollowupCopy; mode: 'ad' | 'hero'}) =
   return (
     <section style={{...styles.centerScene, ...styles.openingScene}}>
       <div style={mode === 'ad' ? styles.openingBurst : styles.openingAccent} />
-      <AnimatedHeadline text={copy.scene1.headline} startFrame={0} endFrame={90} size={mode === 'ad' ? 108 : 96} />
+      <AnimatedHeadline text={copy.scene1.headline} startFrame={0} endFrame={90} size={mode === 'ad' ? 100 : 96} />
     </section>
   );
 };
@@ -372,14 +372,14 @@ const styles: Record<string, CSSProperties> = {
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: 38,
+    gap: 34,
     textAlign: 'center',
     direction: 'rtl',
   },
   endHeadline: {
     margin: '26px 0 0',
     color: '#ffffff',
-    fontSize: 62,
+    fontSize: 58,
     lineHeight: 1.1,
     fontWeight: 950,
   },
