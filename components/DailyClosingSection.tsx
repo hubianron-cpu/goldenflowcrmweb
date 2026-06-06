@@ -5,7 +5,7 @@ const closingItems = [
     title: "ליד חם #01",
     meta: "שווי ₪300",
     status: "לא קיבל מענה 3 ימים",
-    tone: "border-red-300/20 bg-[rgba(120,40,40,0.18)]",
+    tone: "border-gold-300/20 bg-gold-300/[0.08]",
   },
   {
     title: "ליד חם #02",

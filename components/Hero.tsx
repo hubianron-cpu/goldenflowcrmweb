@@ -11,7 +11,7 @@ import { APP_LOGIN_URL, primaryCta } from "@/lib/constants";
 const metrics = [
   { label: "לידים לטיפול היום", value: "6", tone: "text-gold-300" },
   { label: "שווי עסקאות פתוחות", value: "₪7,823", tone: "text-gold-200" },
-  { label: "כסף בסיכון", value: "₪1,347", tone: "text-red-100" },
+  { label: "כסף בסיכון", value: "₪1,347", tone: "text-gold-200" },
   { label: "התקדמות ליעד", value: "68%", tone: "text-white" },
 ];
 

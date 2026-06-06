@@ -74,7 +74,7 @@ export function RoiSection() {
                     card.highlight
                       ? "border-gold-300/25 bg-gold-300/[0.08]"
                       : card.risk
-                        ? "border-red-300/15 bg-[rgba(120,40,40,0.18)]"
+                      ? "border-gold-300/15 bg-gold-300/[0.06]"
                         : "border-white/10 bg-ink-950/70"
                   }`}
                 >
@@ -92,7 +92,7 @@ export function RoiSection() {
                 <span className="font-bold">פעולות רווחיות מזוהות מהר יותר.</span>
                 <TrendingUp className="mr-auto hidden text-gold-300 sm:block" size={22} aria-hidden="true" />
               </div>
-              <div className="flex items-center gap-3 rounded-lg border border-red-300/15 bg-red-300/10 p-4 text-red-100">
+            <div className="flex items-center gap-3 rounded-lg border border-white/10 bg-white/[0.045] p-4 text-zinc-200">
                 <TrendingDown size={22} aria-hidden="true" />
                 <span className="font-bold">מקורות חלשים לא נשארים נסתרים.</span>
               </div>

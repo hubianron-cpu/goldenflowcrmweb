@@ -1,5 +1,5 @@
 import { ArrowLeft, LogIn } from "lucide-react";
-import { APP_LOGIN_URL, primaryCta } from "@/lib/constants";
+import { APP_LOGIN_URL } from "@/lib/constants";
 
 export function FinalCta() {
   return (
@@ -16,7 +16,7 @@ export function FinalCta() {
           </p>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
             <a href={APP_LOGIN_URL} className="gold-button">
-              {primaryCta}
+              כניסה למערכת GoldenFlow
               <ArrowLeft size={18} aria-hidden="true" />
             </a>
             <a href={APP_LOGIN_URL} className="ghost-button">

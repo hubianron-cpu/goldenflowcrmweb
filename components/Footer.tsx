@@ -1,15 +1,19 @@
 import Image from "next/image";
-import { ArrowLeft, LogIn } from "lucide-react";
+import { Instagram, LogIn } from "lucide-react";
 import { APP_LOGIN_URL } from "@/lib/constants";
 
 const footerLinks = [
-  { label: "איך זה עובד", href: "#how-it-works" },
-  { label: "פיצ׳רים", href: "#features" },
-  { label: "מרכז ROI", href: "#roi" },
-  { label: "מחיר", href: "#pricing" },
-  { label: "תנאי שימוש", href: "#" },
-  { label: "מדיניות פרטיות", href: "#" },
+  { label: "אודות", href: "/about" },
+  { label: "פיצ׳רים", href: "/features" },
+  { label: "מרכז ROI", href: "/roi" },
+  { label: "מחיר", href: "/pricing" },
+  { label: "שאלות נפוצות", href: "/faq" },
+  { label: "צור קשר", href: "/contact" },
+  { label: "מדיניות פרטיות", href: "/privacy" },
+  { label: "תנאי שימוש", href: "/terms" },
 ];
+
+const instagramUrl = "https://www.instagram.com/goldenflowcrm/";
 
 export function Footer() {
   return (
@@ -36,11 +40,16 @@ export function Footer() {
         <div className="flex flex-col gap-3 sm:flex-row md:justify-center">
           <a href={APP_LOGIN_URL} className="ghost-button min-w-44 px-5">
             <LogIn size={18} aria-hidden="true" />
-            התחברות למערכת
+            כניסה למערכת
           </a>
-          <a href={APP_LOGIN_URL} className="ghost-button min-w-36 px-5">
-            <ArrowLeft size={18} aria-hidden="true" />
-            קבל גישה למערכת
+          <a
+            href={instagramUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ghost-button min-w-36 px-5"
+          >
+            <Instagram size={18} aria-hidden="true" />
+            אינסטגרם
           </a>
         </div>
 
