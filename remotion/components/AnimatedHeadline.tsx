@@ -55,11 +55,11 @@ const styles: Record<string, CSSProperties> = {
     textShadow: '0 24px 70px rgba(0,0,0,0.55)',
   },
   support: {
-    margin: '34px auto 0',
-    maxWidth: 760,
+    margin: '30px auto 0',
+    maxWidth: 820,
     color: '#d6d6d6',
-    fontSize: 38,
+    fontSize: 36,
     fontWeight: 700,
-    lineHeight: 1.35,
+    lineHeight: 1.42,
   },
 };

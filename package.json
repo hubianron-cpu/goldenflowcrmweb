@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "remotion:studio": "remotion studio remotion/index.ts",
-    "remotion:render:lead-followup": "remotion render remotion/index.ts LeadFollowupVideo out/goldenflow-lead-followup.mp4"
+    "remotion:render:lead-followup": "remotion render remotion/index.ts LeadFollowupVideo out/goldenflow-lead-followup.mp4",
+    "remotion:render:lead-followup-ad": "remotion render remotion/index.ts LeadFollowupAdVideo out/goldenflow-lead-followup-ad.mp4",
+    "remotion:render:lead-followup-hero": "remotion render remotion/index.ts LeadFollowupHeroVideo out/goldenflow-lead-followup-hero.mp4"
   },
   "dependencies": {
     "@remotion/cli": "^4.0.473",
