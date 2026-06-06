@@ -30,7 +30,7 @@ const pricingItems = [
 
 export function HomeProblemPreview() {
   return (
-    <section className="section-pad border-b border-white/10">
+    <section className="border-b border-white/10 py-14 sm:py-20 lg:py-24">
       <div className="container-shell">
         <div className="section-heading">
           <span className="eyebrow">הבעיה</span>
@@ -42,7 +42,7 @@ export function HomeProblemPreview() {
             לחזור היום ומה הפעולה הבאה שצריכה לקרות.
           </p>
         </div>
-        <div className="mt-10 grid gap-8 lg:grid-cols-[1fr_390px] lg:items-center">
+        <div className="mt-8 grid gap-6 lg:grid-cols-[1fr_360px] lg:items-center lg:gap-8">
           <div className="premium-card text-right">
             <h3 className="text-2xl font-black leading-tight text-white sm:text-3xl">
               הלידים לא נעלמים. הם פשוט מחכים לפולואפ.
@@ -59,7 +59,7 @@ export function HomeProblemPreview() {
             src="/videos/goldenflow-lead-followup-ad.mp4"
             title="GoldenFlowCRM lead follow-up video"
             placement="section"
-            className="lg:mx-0"
+            className="lg:mx-0 lg:justify-self-start"
           />
         </div>
       </div>
