@@ -6,13 +6,17 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "remotion:studio": "remotion studio remotion/index.ts",
+    "remotion:render:lead-followup": "remotion render remotion/index.ts LeadFollowupVideo out/goldenflow-lead-followup.mp4"
   },
   "dependencies": {
+    "@remotion/cli": "^4.0.473",
+    "lucide-react": "0.468.0",
     "next": "16.2.7",
     "react": "19.0.0",
     "react-dom": "19.0.0",
-    "lucide-react": "0.468.0"
+    "remotion": "^4.0.473"
   },
   "devDependencies": {
     "@types/node": "22.10.2",
