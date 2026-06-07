@@ -21,7 +21,7 @@ export function VideoFrame({
   return (
     <div
       className={[
-        "relative mx-auto aspect-[9/16] w-full overflow-hidden rounded-[1.75rem] border border-gold-300/25 bg-black shadow-[0_22px_72px_rgba(0,0,0,0.42),0_0_34px_rgba(212,175,55,0.09)]",
+        "relative mx-auto aspect-[9/16] w-full overflow-hidden rounded-[1.75rem] border border-gold-300/25 bg-black p-2 shadow-[0_22px_72px_rgba(0,0,0,0.42),0_0_34px_rgba(212,175,55,0.09)] sm:p-3",
         sizeClass,
         className,
       ].join(" ")}
@@ -32,7 +32,7 @@ export function VideoFrame({
       <video
         aria-label={title}
         autoPlay
-        className="h-full w-full bg-black object-cover brightness-[1.08] contrast-[1.04]"
+        className="h-full w-full rounded-[1.25rem] bg-black object-contain object-center brightness-[1.08] contrast-[1.04]"
         loop
         muted
         playsInline

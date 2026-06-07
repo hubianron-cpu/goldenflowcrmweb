@@ -51,7 +51,7 @@ export function Hero() {
         }}
       />
       <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-l from-transparent via-gold-300/30 to-transparent" />
-      <div className="container-shell relative z-10 grid min-h-[calc(100vh-8rem)] items-start gap-10 pb-28 pt-10 lg:grid-cols-[1.02fr_.98fr] lg:items-center lg:gap-12 lg:pb-12 lg:pt-14">
+      <div className="container-shell relative z-10 grid min-h-[calc(100vh-8rem)] items-start gap-10 pb-28 pt-10 lg:grid-cols-[1.02fr_.98fr] lg:gap-12 lg:pb-12 lg:pt-14">
         <div className="mx-auto max-w-3xl text-center lg:mx-0 lg:pt-2 lg:text-right">
           <div className="eyebrow mx-auto justify-center text-center lg:mx-0">
             <Image
@@ -117,7 +117,7 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative">
+        <div className="relative lg:pt-16 xl:pt-20">
           <div className="absolute -inset-6 rounded-[2rem] bg-gold-300/12 blur-3xl" />
           <div className="glass-panel relative overflow-hidden rounded-lg p-3 sm:p-5">
             <div className="pointer-events-none absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-gold-300/10 to-transparent" />

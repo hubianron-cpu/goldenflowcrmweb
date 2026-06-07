@@ -43,7 +43,7 @@ export function HomeProblemPreview() {
           </p>
         </div>
         <div className="mt-8 grid gap-6 lg:grid-cols-[1fr_360px] lg:items-center lg:gap-8">
-          <div className="premium-card text-right">
+          <div className="premium-card text-center lg:text-right">
             <h3 className="text-2xl font-black leading-tight text-white sm:text-3xl">
               הלידים לא נעלמים. הם פשוט מחכים לפולואפ.
             </h3>
@@ -79,7 +79,7 @@ export function HomeSolutionPreview() {
     >
       <div className="container-shell">
         <div className="grid gap-8 lg:grid-cols-[.9fr_1.1fr] lg:items-center">
-          <div>
+          <div className="text-center lg:text-right">
             <span className="eyebrow">הפתרון</span>
             <h2 className="section-title">
               GoldenFlow לא רק שומרת פרטים. היא עוזרת לך לפעול.
@@ -144,7 +144,7 @@ export function HomeRoiPreview() {
     <section id="roi" className="section-pad bg-gold-radial">
       <div className="container-shell">
         <div className="grid gap-8 lg:grid-cols-[.9fr_1.1fr] lg:items-center">
-          <div>
+          <div className="text-center lg:text-right">
             <span className="eyebrow">מרכז ROI</span>
             <h2 className="section-title">לדעת מה באמת מחזיר לך כסף.</h2>
             <p className="section-copy">
