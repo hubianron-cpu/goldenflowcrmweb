@@ -15,7 +15,7 @@ export default function RoiPage() {
     <PageShell>
       <PageHero
         eyebrow="מרכז ROI"
-        title="לדעת מה באמת מחזיר לך כסף"
+        title="ככה תדע החזר השקעה על כל פעולה בעסק:"
         description="GoldenFlow עוזרת להבין את הקשר בין מקורות הלידים, ההשקעה וההכנסה בפועל, כדי לקבל תמונת החלטה נקייה יותר."
       />
 

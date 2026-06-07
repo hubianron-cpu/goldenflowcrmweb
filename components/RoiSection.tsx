@@ -28,7 +28,7 @@ export function RoiSection() {
               מרכז ROI
             </span>
             <h2 className="section-title">
-              מרכז ROI - לדעת מה באמת מחזיר לך כסף.
+              ככה תדע החזר השקעה על כל פעולה בעסק:
             </h2>
             <p className="section-copy">
               לא מספיק להביא לידים. צריך לדעת איזה מקור, כלי או פעולה באמת

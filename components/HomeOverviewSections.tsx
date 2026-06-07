@@ -3,6 +3,7 @@ import {
   BarChart3,
   Check,
   CheckCircle2,
+  ExternalLink,
   LayoutDashboard,
   ListChecks,
   Route,
@@ -28,6 +29,8 @@ const pricingItems = [
   "מרכז ROI",
 ];
 
+const roiDemoUrl = "https://youtube.com/shorts/ydtVmRfE0fU?si=0itXV1ocmY8W3RZ9";
+
 export function HomeProblemPreview() {
   return (
     <section className="border-b border-white/10 py-14 sm:py-20 lg:py-24">
@@ -35,7 +38,7 @@ export function HomeProblemPreview() {
         <div className="section-heading">
           <span className="eyebrow">הבעיה</span>
           <h2 className="section-title">
-            אם אין סדר במכירות - כסף נשאר על השולחן.
+            אם אין סדר במכירות - זה כסף שהולך לאיבוד
           </h2>
           <p className="section-copy">
             לידים, משימות ומעקבים שמתפזרים בין כלים שונים מקשים להבין למי
@@ -45,7 +48,7 @@ export function HomeProblemPreview() {
         <div className="mt-8 grid gap-6 lg:grid-cols-[1fr_360px] lg:items-center lg:gap-8">
           <div className="premium-card text-center lg:text-right">
             <h3 className="text-2xl font-black leading-tight text-white sm:text-3xl">
-              הלידים לא נעלמים. הם פשוט מחכים לפולואפ.
+              מנהל מכירות אישי שעובד בשבילך
             </h3>
             <p className="mt-4 text-base leading-8 text-zinc-300 sm:text-lg">
               GoldenFlowCRM עושה לך סדר ומראה בכל יום עם מי לדבר, מה הפעולה הבאה, ואיפה יש כסף שצריך לקדם.
@@ -82,7 +85,9 @@ export function HomeSolutionPreview() {
           <div className="text-center lg:text-right">
             <span className="eyebrow">הפתרון</span>
             <h2 className="section-title">
-              GoldenFlow לא רק שומרת פרטים. היא עוזרת לך לפעול.
+              אתה לא צריך רשימה של לידים,
+              <br />
+              המערכת מראה לך מה יביא לך כסף עכשיו
             </h2>
             <p className="section-copy">
               במקום עוד רשימה של לידים, מקבלים סדר יומי: מי דורש טיפול, מה
@@ -109,7 +114,7 @@ export function HomeFeaturesPreview() {
       <div className="container-shell">
         <div className="section-heading">
           <span className="eyebrow">פיצ׳רים מרכזיים</span>
-          <h2 className="section-title">הכלים שמחזיקים את תהליך המכירה במקום אחד.</h2>
+          <h2 className="section-title">הכלים שמנהלים את תהליך המכירה במקום אחד</h2>
           <p className="section-copy">
             עמוד הבית מציג את היכולות המרכזיות. הפירוט המלא נמצא בעמוד הפיצ׳רים.
           </p>
@@ -146,7 +151,7 @@ export function HomeRoiPreview() {
         <div className="grid gap-8 lg:grid-cols-[.9fr_1.1fr] lg:items-center">
           <div className="text-center lg:text-right">
             <span className="eyebrow">מרכז ROI</span>
-            <h2 className="section-title">לדעת מה באמת מחזיר לך כסף.</h2>
+            <h2 className="section-title">ככה תדע החזר השקעה על כל פעולה בעסק:</h2>
             <p className="section-copy">
               GoldenFlow מציגה תמונת החלטה קצרה: כמה הושקע, כמה נכנס, מה הרווח
               הנקי, ומה כדאי להמשיך לבדוק.
@@ -155,6 +160,21 @@ export function HomeRoiPreview() {
               למרכז ROI
               <ArrowLeft size={18} aria-hidden="true" />
             </a>
+            <div className="mt-6 rounded-lg border border-gold-300/25 bg-black/35 p-5 text-center shadow-[0_22px_70px_rgba(0,0,0,0.28)] lg:text-right">
+              <h3 className="text-lg font-black text-white">רוצה לראות את מרכז ROI בפעולה?</h3>
+              <p className="mt-3 text-sm leading-7 text-zinc-300">
+                בסרטון קצר אני מראה איך GoldenFlow עוזרת להבין כמה הושקע, כמה נכנס, מה הרווח הנקי ומה כדאי להמשיך לחזק.
+              </p>
+              <a
+                href={roiDemoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ghost-button mt-5 w-full sm:w-auto"
+              >
+                צפה בהדגמת מרכז ROI
+                <ExternalLink size={17} aria-hidden="true" />
+              </a>
+            </div>
           </div>
 
           <div className="glass-panel rounded-lg p-5">
@@ -184,9 +204,9 @@ export function HomePricingPreview() {
       <div className="container-shell">
         <div className="section-heading">
           <span className="eyebrow">מחיר השקה</span>
-          <h2 className="section-title">תמחור פשוט להתחלה מסודרת.</h2>
+          <h2 className="section-title">מערכת שעובדת בשבילך 24/7</h2>
           <p className="section-copy">
-            כרטיס מחיר קצר בעמוד הבית, עם פירוט נוסף בעמוד המחיר.
+            ל-20 הראשונים מחיר קבוע לכל החיים.
           </p>
         </div>
 
