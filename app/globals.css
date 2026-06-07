@@ -30,6 +30,10 @@ html {
   scroll-behavior: smooth;
 }
 
+[id] {
+  scroll-margin-top: 5.5rem;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -65,7 +69,11 @@ summary:focus-visible {
 
 @media (max-width: 767px) {
   body {
-    padding-bottom: calc(5.75rem + env(safe-area-inset-bottom));
+    padding-bottom: calc(7.25rem + env(safe-area-inset-bottom));
+  }
+
+  [id] {
+    scroll-margin-top: 5.75rem;
   }
 }
 
@@ -159,5 +167,28 @@ summary:focus-visible {
 
   .flow-kicker {
     @apply rounded-full border border-white/10 bg-white/[0.035] px-3 py-2 text-xs font-bold text-zinc-300;
+  }
+
+  @media (max-width: 767px) {
+    .section-pad {
+      @apply py-14;
+    }
+
+    .premium-card {
+      @apply mx-auto flex w-full max-w-sm flex-col items-center justify-center text-center;
+    }
+
+    .premium-card > svg {
+      @apply mx-auto shrink-0;
+    }
+
+    .premium-surface,
+    .metric-card {
+      @apply mx-auto w-full max-w-sm text-center;
+    }
+
+    .metric-card p {
+      @apply mx-auto;
+    }
   }
 }

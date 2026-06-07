@@ -44,7 +44,7 @@ export function FeaturesSection() {
           {features.map(([feature, Icon]) => (
             <div
               key={feature}
-              className="flex min-h-24 items-center gap-4 rounded-lg border border-white/10 bg-gradient-to-b from-white/[0.055] to-white/[0.025] p-4 transition hover:border-gold-300/30 hover:bg-white/[0.055]"
+              className="mx-auto flex min-h-24 w-full max-w-sm flex-col items-center justify-center gap-3 rounded-lg border border-white/10 bg-gradient-to-b from-white/[0.055] to-white/[0.025] p-4 text-center transition hover:border-gold-300/30 hover:bg-white/[0.055] sm:max-w-none sm:flex-row sm:justify-start sm:text-right"
             >
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-gold-300/20 bg-gold-300/10">
                 <Icon className="text-gold-300" size={20} aria-hidden="true" />

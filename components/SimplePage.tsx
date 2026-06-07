@@ -69,7 +69,7 @@ export function PageHero({
 
 export function PageCta({ label = "כניסה למערכת GoldenFlow" }: { label?: string }) {
   return (
-    <a href={APP_LOGIN_URL} className="gold-button">
+    <a href={APP_LOGIN_URL} className="gold-button mx-auto">
       {label}
       <ArrowLeft size={18} aria-hidden="true" />
     </a>

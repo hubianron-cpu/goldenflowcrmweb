@@ -17,9 +17,9 @@ const instagramUrl = "https://www.instagram.com/goldenflowcrm/";
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-ink-950 py-10">
-      <div className="container-shell grid gap-8 md:grid-cols-[1fr_auto_1fr] md:items-center">
-        <div>
+    <footer className="border-t border-white/10 bg-ink-950 py-10 pb-[calc(8rem+env(safe-area-inset-bottom))] md:pb-10">
+      <div className="container-shell grid gap-8 text-center md:grid-cols-[1fr_auto_1fr] md:items-center md:text-right">
+        <div className="flex flex-col items-center md:items-start">
           <div className="inline-flex rounded-lg border border-gold-300/20 bg-black/35 px-4 py-3">
             <Image
               src="/brand/goldenflow-logo-full.png"
@@ -31,13 +31,13 @@ export function Footer() {
               className="h-16 w-auto max-w-full object-contain sm:h-20"
             />
           </div>
-          <p className="mt-4 max-w-xl leading-7 text-zinc-400">
+          <p className="mx-auto mt-4 max-w-xl leading-7 text-zinc-400 md:mx-0">
             מערכת חכמה לניהול לידים, משימות ומכירות.
           </p>
           <p className="mt-6 text-sm text-zinc-500">© GoldenFlow. All rights reserved.</p>
         </div>
 
-        <div className="flex flex-col gap-3 sm:flex-row md:justify-center">
+        <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
           <a href={APP_LOGIN_URL} className="ghost-button min-w-44 px-5">
             <LogIn size={18} aria-hidden="true" />
             כניסה למערכת
@@ -53,7 +53,7 @@ export function Footer() {
           </a>
         </div>
 
-        <div className="grid gap-3 text-sm font-semibold text-zinc-300 sm:grid-cols-2 md:text-left">
+        <div className="mx-auto grid gap-3 text-center text-sm font-semibold text-zinc-300 sm:grid-cols-2 md:mx-0 md:justify-items-start md:text-left">
           {footerLinks.map((link) => (
             <a key={link.label} href={link.href} className="transition hover:text-gold-300">
               {link.label}
