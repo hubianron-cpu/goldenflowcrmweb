@@ -39,7 +39,7 @@ export function PricingSection() {
               </span>
             </div>
             <div className="mt-6 flex items-end justify-center gap-2 sm:justify-start">
-              <span className="text-5xl font-black text-white sm:text-6xl">₪97</span>
+              <span className="text-5xl font-black text-white sm:text-6xl">₪99</span>
               <span className="pb-3 text-lg font-bold text-zinc-300">לחודש</span>
             </div>
             <p className="microcopy mt-4">
@@ -58,8 +58,7 @@ export function PricingSection() {
               רוצה לפתוח מנוי
             </a>
             <p className="mt-4 text-center text-xs leading-6 text-zinc-400">
-              המחיר מיועד למשתמשים הראשונים ועשוי להתעדכן בהמשך.
-            </p>
+מחיר ההשקה נשאר קבוע לכל החיים ל-20 הראשונים            </p>
           </div>
         </div>
       </div>
