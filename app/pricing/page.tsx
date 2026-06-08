@@ -25,7 +25,7 @@ export default function PricingPage() {
         </div>
         <div className="p-6 sm:p-8">
           <div className="flex items-end justify-center gap-2">
-            <span className="text-6xl font-black text-white">₪97</span>
+            <span className="text-6xl font-black text-white">₪99</span>
             <span className="pb-3 text-lg font-bold text-zinc-300">לחודש</span>
           </div>
           <ul className="mt-8 grid gap-3 sm:grid-cols-2">
@@ -40,8 +40,7 @@ export default function PricingPage() {
             <PageCta />
           </div>
           <p className="mt-4 text-center text-xs leading-6 text-zinc-400">
-            המחיר עשוי להתעדכן בהמשך.
-          </p>
+מחיר קבוע -20 רוכשים הראשונים          </p>
         </div>
       </section>
     </PageShell>
