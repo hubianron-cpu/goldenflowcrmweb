@@ -216,7 +216,7 @@ export function HomePricingPreview() {
           </div>
           <div className="p-6 sm:p-8">
             <div className="flex items-end justify-center gap-2 sm:justify-start">
-              <span className="text-5xl font-black text-white sm:text-6xl">₪97</span>
+              <span className="text-5xl font-black text-white sm:text-6xl">₪99</span>
               <span className="pb-3 text-lg font-bold text-zinc-300">לחודש</span>
             </div>
             <ul className="mt-6 grid gap-3 sm:grid-cols-2">
