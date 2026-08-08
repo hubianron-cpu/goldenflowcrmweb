@@ -25,7 +25,7 @@ export default function PricingPage() {
         </div>
         <div className="p-6 sm:p-8">
           <div className="flex items-end justify-center gap-2">
-            <span className="text-6xl font-black text-white">₪99</span>
+            <span className="text-6xl font-black text-white">₪79</span>
             <span className="pb-3 text-lg font-bold text-zinc-300">לחודש</span>
           </div>
           <ul className="mt-8 grid gap-3 sm:grid-cols-2">
