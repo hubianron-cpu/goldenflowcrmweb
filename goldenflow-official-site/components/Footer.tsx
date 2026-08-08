@@ -1,51 +1,64 @@
 import Image from "next/image";
-import { MessageCircle } from "lucide-react";
-import { whatsappUrl } from "@/lib/constants";
+import { Instagram, LogIn } from "lucide-react";
+import { APP_LOGIN_URL } from "@/lib/constants";
 
 const footerLinks = [
-  { label: "איך זה עובד", href: "#how-it-works" },
-  { label: "פיצ׳רים", href: "#features" },
-  { label: "מרכז ROI", href: "#roi" },
-  { label: "מחיר", href: "#pricing" },
-  { label: "תנאי שימוש", href: "#" },
-  { label: "מדיניות פרטיות", href: "#" },
+  { label: "אודות", href: "/about" },
+  { label: "פיצ׳רים", href: "/features" },
+  { label: "מרכז ROI", href: "/roi" },
+  { label: "מחיר", href: "/pricing" },
+  { label: "שאלות נפוצות", href: "/faq" },
+  { label: "צור קשר", href: "/contact" },
+  { label: "מדיניות פרטיות", href: "/privacy" },
+  { label: "תנאי שימוש", href: "/terms" },
 ];
+
+const instagramUrl = "https://www.instagram.com/goldenflowcrm/";
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-ink-950 py-10">
-      <div className="container-shell grid gap-8 md:grid-cols-[1fr_auto]">
-        <div>
-          <div className="flex items-center gap-3">
-            <span className="flex h-12 w-12 items-center justify-center rounded-lg border border-gold-300/30 bg-ink-950/80 p-1.5">
-              <Image
-                src="/brand/goldenflow-icon.png"
-                alt="GoldenFlow"
-                width={128}
-                height={128}
-                loading="eager"
-                unoptimized
-                className="h-full w-full max-w-full object-contain"
-              />
-            </span>
-            <span className="text-xl font-black text-white">GoldenFlow CRM</span>
+    <footer className="border-t border-white/10 bg-ink-950 py-10 pb-[calc(8rem+env(safe-area-inset-bottom))] md:pb-10">
+      <div className="container-shell grid gap-8 text-center md:grid-cols-[1fr_auto_1fr] md:items-center md:text-right">
+        <div className="flex flex-col items-center md:items-start">
+          <div className="inline-flex rounded-lg border border-gold-300/20 bg-black/35 px-4 py-3">
+            <Image
+              src="/brand/goldenflow-logo-full.png"
+              alt="GoldenFlow CRM"
+              width={220}
+              height={220}
+              loading="eager"
+              unoptimized
+              className="h-16 w-auto max-w-full object-contain sm:h-20"
+            />
           </div>
-          <p className="mt-4 max-w-xl leading-7 text-zinc-400">
+          <p className="mx-auto mt-4 max-w-xl leading-7 text-zinc-400 md:mx-0">
             מערכת חכמה לניהול לידים, משימות ומכירות.
           </p>
           <p className="mt-6 text-sm text-zinc-500">© GoldenFlow. All rights reserved.</p>
         </div>
 
-        <div className="grid gap-3 text-sm font-semibold text-zinc-300 sm:grid-cols-2 md:text-left">
+        <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <a href={APP_LOGIN_URL} className="ghost-button min-w-44 px-5">
+            <LogIn size={18} aria-hidden="true" />
+            כניסה למערכת
+          </a>
+          <a
+            href={instagramUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ghost-button min-w-36 px-5"
+          >
+            <Instagram size={18} aria-hidden="true" />
+            אינסטגרם
+          </a>
+        </div>
+
+        <div className="mx-auto grid gap-3 text-center text-sm font-semibold text-zinc-300 sm:grid-cols-2 md:mx-0 md:justify-items-start md:text-left">
           {footerLinks.map((link) => (
             <a key={link.label} href={link.href} className="transition hover:text-gold-300">
               {link.label}
             </a>
           ))}
-          <a href={whatsappUrl} className="mt-3 inline-flex items-center gap-2 text-gold-300 sm:col-span-2">
-            <MessageCircle size={17} aria-hidden="true" />
-            דבר איתי בוואטסאפ
-          </a>
         </div>
       </div>
     </footer>

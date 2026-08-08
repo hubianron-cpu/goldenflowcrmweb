@@ -1,5 +1,5 @@
-import { ArrowLeft, MessageCircle } from "lucide-react";
-import { primaryCta, whatsappUrl } from "@/lib/constants";
+import { ArrowLeft, LogIn } from "lucide-react";
+import { APP_LOGIN_URL } from "@/lib/constants";
 
 export function FinalCta() {
   return (
@@ -8,20 +8,22 @@ export function FinalCta() {
         <div className="glass-panel rounded-lg p-6 text-center sm:p-10 lg:p-14">
           <span className="eyebrow">מתחילים מסודר</span>
           <h2 className="mx-auto max-w-4xl text-3xl font-black leading-tight text-white sm:text-5xl">
-            רוצה לראות אם GoldenFlow מתאימה לתהליך המכירה שלך?
+            רוצה לראות איך GoldenFlow
+            <br />
+            עושה לך חיים קלים בעסק?
           </h2>
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-zinc-300">
             אפשר לקבל פרטים, להבין איך המערכת עובדת ולבדוק אם היא מתאימה לניהול
             הלידים, המשימות והמעקבים בעסק שלך.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-            <a href={whatsappUrl} className="gold-button">
-              {primaryCta}
+            <a href={APP_LOGIN_URL} className="gold-button">
+              כניסה למערכת GoldenFlow
               <ArrowLeft size={18} aria-hidden="true" />
             </a>
-            <a href={whatsappUrl} className="ghost-button">
-              <MessageCircle size={18} aria-hidden="true" />
-              שלח הודעה בוואטסאפ
+            <a href={APP_LOGIN_URL} className="ghost-button">
+              <LogIn size={18} aria-hidden="true" />
+              כניסה למערכת
             </a>
           </div>
           <p className="microcopy mx-auto mt-5 max-w-2xl">

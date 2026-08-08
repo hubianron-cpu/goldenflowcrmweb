@@ -31,12 +31,10 @@ export function ProductMomentsSection() {
   return (
     <section className="section-pad">
       <div className="container-shell">
-        <div className="grid gap-8 lg:grid-cols-[.85fr_1.15fr] lg:items-end">
-          <div>
-            <span className="eyebrow">Product Moments</span>
-            <h2 className="section-title">רגעים יומיים שמחזירים אותך לפעולה</h2>
-          </div>
-          <p className="section-copy lg:mt-0">
+        <div className="section-heading">
+          <span className="eyebrow">Product Moments</span>
+          <h2 className="section-title">רגעים יומיים שמחזירים אותך לפעולה</h2>
+          <p className="section-copy">
             האתר לא מציג רק פיצ׳רים. הוא מראה איך GoldenFlow עוזרת מחר בבוקר:
             מה דחוף, איפה יש כסף, ומה הפעולה שמקדמת את המכירה.
           </p>

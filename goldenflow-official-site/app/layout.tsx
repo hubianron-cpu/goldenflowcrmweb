@@ -2,12 +2,12 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "GoldenFlow",
+  title: "GoldenFlow CRM",
   description: "מערכת חכמה לניהול לידים, משימות ומכירות",
   icons: {
-    icon: "/brand/goldenflow-icon.png",
-    shortcut: "/brand/goldenflow-icon.png",
-    apple: "/brand/goldenflow-icon.png",
+    icon: "/brand/goldenflow-icon-gold.png",
+    shortcut: "/brand/goldenflow-icon-gold.png",
+    apple: "/brand/goldenflow-icon-gold.png",
   },
 };
 

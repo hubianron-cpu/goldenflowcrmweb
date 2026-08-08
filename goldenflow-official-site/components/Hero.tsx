@@ -3,15 +3,16 @@ import {
   ArrowLeft,
   CheckCircle2,
   Clock,
-  MessageCircle,
+  LogIn,
   TrendingUp,
 } from "lucide-react";
-import { primaryCta, whatsappUrl } from "@/lib/constants";
+import { APP_LOGIN_URL, primaryCta } from "@/lib/constants";
+import { VideoFrame } from "@/components/VideoFrame";
 
 const metrics = [
   { label: "לידים לטיפול היום", value: "6", tone: "text-gold-300" },
   { label: "שווי עסקאות פתוחות", value: "₪7,823", tone: "text-gold-200" },
-  { label: "כסף בסיכון", value: "₪1,347", tone: "text-red-100" },
+  { label: "כסף בסיכון", value: "₪1,347", tone: "text-gold-200" },
   { label: "התקדמות ליעד", value: "68%", tone: "text-white" },
 ];
 
@@ -23,56 +24,100 @@ const leadRows = [
   { name: "מתעניין חדש", status: "מקור: אורגני - לקבוע שיחה", value: "חדש", tone: "border-white/15 text-zinc-300" },
 ];
 
+const contactSteps = [
+  "נבין איך לעבוד עם GoldenFlow בעסק שלך",
+  "נראה לך שלב אחרי שלב איך המערכת עובדת בשבילך",
+  "תראה איך עבודה מסודרת יכולה לקדם יותר סגירות",
+  "איך לנהל בתוך המערכת מרכז ROI יעיל",
+  "לנהל תהליכי מכירה בקלות וביעילות",
+];
+
 export function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden bg-gold-radial">
+    <section
+      id="top"
+      className="relative overflow-hidden bg-ink-950 bg-cover bg-center"
+      style={{
+        backgroundImage:
+          "linear-gradient(90deg, rgba(0,0,0,0.82), rgba(0,0,0,0.45), rgba(0,0,0,0.2)), url('/goldenflow-hero-main-bg.png')",
+      }}
+    >
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.028)_1px,transparent_1px)] bg-[size:72px_72px] opacity-30" />
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(circle at 68% 42%, rgba(0,0,0,0.74), rgba(0,0,0,0.5) 34%, rgba(0,0,0,0.2) 64%, transparent 100%), linear-gradient(90deg, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.36) 48%, rgba(0,0,0,0.66) 100%)",
+        }}
+      />
       <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-l from-transparent via-gold-300/30 to-transparent" />
-      <div className="container-shell relative grid min-h-[calc(100vh-5rem)] items-center gap-12 py-14 lg:grid-cols-[1.02fr_.98fr] lg:py-20">
-        <div className="max-w-3xl">
-          <div className="eyebrow">
+      <div className="container-shell relative z-10 grid min-h-[calc(100vh-8rem)] items-start gap-10 pb-28 pt-10 lg:grid-cols-[1.02fr_.98fr] lg:gap-12 lg:pb-12 lg:pt-14">
+        <div className="mx-auto max-w-3xl text-center lg:mx-0 lg:pt-2 lg:text-right">
+          <div className="eyebrow mx-auto justify-center text-center lg:mx-0">
             <Image
-              src="/brand/goldenflow-icon.png"
+              src="/brand/goldenflow-icon-gold.png"
               alt="GoldenFlow"
               width={128}
               height={128}
               loading="eager"
               unoptimized
-              className="h-6 w-6 max-w-full object-contain"
+              className="h-8 w-8 max-w-full object-contain sm:h-9 sm:w-9"
             />
             CRM חכם למאמנים, יועצים ונותני שירות
           </div>
-          <h1 className="text-4xl font-black leading-[1.08] text-white sm:text-5xl lg:text-7xl">
+          <h1
+            className="text-3xl font-black leading-[1.12] text-white sm:text-5xl lg:max-w-[42rem] lg:text-6xl lg:leading-[1.08] xl:max-w-3xl 2xl:text-7xl"
+            style={{ textShadow: "0 8px 40px rgba(0,0,0,0.58)" }}
+          >
             הלידים שלך לא נעלמים. הם פשוט צריכים ניהול נכון.
           </h1>
-          <p className="mt-6 text-lg leading-8 text-zinc-300 sm:text-xl">
+          <p className="mx-auto mt-6 text-base leading-8 text-zinc-300 sm:text-xl lg:mx-0">
             GoldenFlow CRM מרכזת את הלידים, המשימות ותהליך המכירה שלך במקום אחד -
             ומראה לך בכל יום למי כדאי לפנות, מה הפעולה הבאה ואיפה הכסף מחכה לטיפול.
           </p>
-          <div className="mt-6 grid max-w-2xl gap-3 sm:grid-cols-3">
+          <div className="mx-auto mt-6 grid max-w-md gap-3 sm:max-w-2xl sm:grid-cols-3 lg:mx-0">
             {["סדר יומי ברור", "מעקב אחרי כל ליד", "החלטות לפי נתונים"].map((item) => (
-              <div key={item} className="flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3 py-2 text-sm font-semibold text-zinc-200">
+              <div key={item} className="flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3 py-2 text-center text-sm font-semibold text-zinc-200">
                 <CheckCircle2 className="shrink-0 text-gold-300" size={16} aria-hidden="true" />
                 {item}
               </div>
             ))}
           </div>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a href={whatsappUrl} className="gold-button">
+          <div className="mx-auto mt-8 grid max-w-md gap-4 sm:flex sm:max-w-none sm:flex-row sm:gap-3 lg:mx-0">
+            <a href={APP_LOGIN_URL} className="gold-button w-full sm:w-auto">
               {primaryCta}
               <ArrowLeft size={18} aria-hidden="true" />
             </a>
-            <a href={whatsappUrl} className="ghost-button">
-              <MessageCircle size={18} aria-hidden="true" />
-              דבר איתי בוואטסאפ
+            <a href={APP_LOGIN_URL} className="ghost-button w-full sm:w-auto">
+              <LogIn size={18} aria-hidden="true" />
+              התחברות למערכת
             </a>
           </div>
-          <p className="microcopy mt-5 max-w-2xl">
+          <p className="microcopy mx-auto mt-6 max-w-md text-center lg:mx-0 lg:text-right">
             בלי התחייבות - רק להבין אם זה מתאים לעסק שלך.
           </p>
+          <VideoFrame
+            src="/videos/goldenflow-daily-closing.mp4"
+            title="GoldenFlowCRM daily closing video"
+            placement="hero"
+            className="mt-7 lg:mx-auto"
+          />
+          <div className="mx-auto mt-6 max-w-xl rounded-2xl border border-gold-300/20 bg-[#111111]/78 p-5 text-right shadow-[0_22px_70px_rgba(0,0,0,0.34),0_0_34px_rgba(212,175,55,0.08)] backdrop-blur sm:p-6 lg:mx-auto">
+            <h2 className="text-base font-black text-white sm:text-lg">
+              מה קורה אחרי שתשלח הודעה?
+            </h2>
+            <div className="mt-4 grid gap-3">
+              {contactSteps.map((step) => (
+                <div key={step} className="flex items-start gap-3 text-sm leading-6 text-zinc-300 sm:text-[15px]">
+                  <CheckCircle2 className="mt-1 shrink-0 text-gold-300" size={16} aria-hidden="true" />
+                  <span>{step}</span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
-        <div className="relative">
+        <div className="relative lg:pt-16 xl:pt-20">
           <div className="absolute -inset-6 rounded-[2rem] bg-gold-300/12 blur-3xl" />
           <div className="glass-panel relative overflow-hidden rounded-lg p-3 sm:p-5">
             <div className="pointer-events-none absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-gold-300/10 to-transparent" />
@@ -80,7 +125,7 @@ export function Hero() {
               <div className="flex items-center gap-3">
                 <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-gold-300/20 bg-gold-300/10 p-1.5">
                   <Image
-                    src="/brand/goldenflow-icon.png"
+                    src="/brand/goldenflow-icon-gold.png"
                     alt="GoldenFlow"
                     width={128}
                     height={128}
@@ -99,9 +144,9 @@ export function Hero() {
               </span>
             </div>
 
-            <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
               {metrics.map((metric) => (
-                <div key={metric.label} className="rounded-lg border border-white/10 bg-ink-950/75 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]">
+                <div key={metric.label} className="metric-card">
                   <p className={`text-3xl font-black ${metric.tone}`}>{metric.value}</p>
                   <p className="mt-2 text-sm leading-6 text-zinc-400">{metric.label}</p>
                 </div>
@@ -109,7 +154,7 @@ export function Hero() {
             </div>
 
             <div className="mt-4 grid gap-4 lg:grid-cols-[1fr_.72fr]">
-              <div className="rounded-lg border border-white/10 bg-ink-950/60 p-4">
+              <div className="premium-surface p-4">
                 <div className="mb-4 flex items-center justify-between">
                   <h3 className="font-bold text-white">מסלול מכירה</h3>
                   <TrendingUp className="text-gold-300" size={18} aria-hidden="true" />
@@ -120,7 +165,7 @@ export function Hero() {
                       <span className="w-16 shrink-0 text-xs font-semibold text-zinc-400">{step}</span>
                       <span className="h-2 flex-1 overflow-hidden rounded-full bg-white/10">
                         <span
-                          className="block h-full rounded-full bg-gradient-to-l from-gold-300 to-gold-600"
+                          className="block h-full rounded-full bg-gradient-to-l from-gold-300 to-gold-600 shadow-[0_0_18px_rgba(212,175,55,0.18)]"
                           style={{ width: `${92 - index * 14}%` }}
                         />
                       </span>
@@ -150,7 +195,7 @@ export function Hero() {
               </div>
             </div>
 
-            <div className="mt-4 rounded-lg border border-white/10 bg-ink-950/55 p-4">
+            <div className="mt-4 premium-surface p-4">
               <div className="mb-3 flex items-center justify-between">
                 <h3 className="font-bold text-white">לידים בעדיפות גבוהה</h3>
                 <span className="text-xs font-bold text-zinc-500">דמו שיווקי</span>
@@ -170,27 +215,29 @@ export function Hero() {
               </div>
             </div>
 
-            <div className="mt-4 rounded-lg border border-white/10 bg-white/[0.035] p-4">
-              <div className="mb-2 flex items-center justify-between text-sm">
-                <span className="font-bold text-white">התקדמות לסגירה</span>
-                <span className="text-gold-300">68%</span>
-              </div>
-              <div className="h-3 overflow-hidden rounded-full bg-white/10">
-                <div className="h-full w-[68%] rounded-full bg-gradient-to-l from-gold-300 to-gold-600" />
-              </div>
-            </div>
-
-            <div className="mt-4 grid gap-2 rounded-lg border border-white/10 bg-ink-950/55 p-4">
-              <div className="flex items-center justify-between">
-                <span className="text-sm font-bold text-white">משימות להיום</span>
-                <span className="text-xs font-bold text-gold-300">8 פתוחות</span>
-              </div>
-              {["לחזור לליד חם #01", "לשלוח הודעה למתעניין מקמפיין", "לקבוע שיחה עם מתעניין חדש"].map((task) => (
-                <div key={task} className="flex items-center gap-2 text-sm text-zinc-300">
-                  <span className="h-2 w-2 rounded-full bg-gold-300" />
-                  {task}
+            <div className="mt-4 grid gap-4 lg:grid-cols-[.72fr_1fr]">
+              <div className="premium-surface p-4">
+                <div className="mb-2 flex items-center justify-between text-sm">
+                  <span className="font-bold text-white">התקדמות לסגירה</span>
+                  <span className="text-gold-300">68%</span>
                 </div>
-              ))}
+                <div className="progress-track">
+                  <div className="progress-fill w-[68%]" />
+                </div>
+              </div>
+
+              <div className="grid gap-2 premium-surface p-4">
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-bold text-white">משימות להיום</span>
+                  <span className="text-xs font-bold text-gold-300">8 פתוחות</span>
+                </div>
+                {["לחזור לליד חם #01", "לשלוח הודעה למתעניין מקמפיין", "לקבוע שיחה עם מתעניין חדש"].map((task) => (
+                  <div key={task} className="flex items-center gap-2 text-sm text-zinc-300">
+                    <span className="h-2 w-2 rounded-full bg-gold-300" />
+                    {task}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

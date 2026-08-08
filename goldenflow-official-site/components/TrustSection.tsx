@@ -22,12 +22,10 @@ export function TrustSection() {
   return (
     <section className="section-pad border-y border-white/10 bg-white/[0.025]">
       <div className="container-shell">
-        <div className="grid gap-8 lg:grid-cols-[.85fr_1.15fr] lg:items-end">
-          <div>
-            <span className="eyebrow">אמון ושימוש יומי</span>
-            <h2 className="section-title">נבנה לעסקים שמוכרים דרך שיחות ומעקב</h2>
-          </div>
-          <p className="section-copy lg:mt-0">
+        <div className="section-heading">
+          <span className="eyebrow">אמון ושימוש יומי</span>
+          <h2 className="section-title">נבנה לעסקים שמוכרים דרך שיחות ומעקב</h2>
+          <p className="section-copy">
             GoldenFlow CRM מיועדת לבעלי עסקים שמוכרים דרך קשר אישי, שיחות ומעקב.
             היא לא מבטיחה מכירות - היא נותנת סדר, תיעוד ובהירות לפעולה הבאה.
           </p>

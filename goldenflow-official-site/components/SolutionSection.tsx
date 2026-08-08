@@ -27,14 +27,12 @@ export function SolutionSection() {
   return (
     <section className="section-pad">
       <div className="container-shell">
-        <div className="grid gap-10 lg:grid-cols-[.9fr_1.1fr] lg:items-end">
-          <div>
-            <span className="eyebrow">הפתרון</span>
-            <h2 className="section-title">
-              GoldenFlow CRM לא רק שומרת פרטים. היא עוזרת לך לפעול.
-            </h2>
-          </div>
-          <p className="section-copy lg:mt-0">
+        <div className="section-heading">
+          <span className="eyebrow">הפתרון</span>
+          <h2 className="section-title">
+            GoldenFlow CRM לא רק שומרת פרטים. היא עוזרת לך לפעול.
+          </h2>
+          <p className="section-copy">
             במקום לרדוף אחרי מידע מפוזר, מקבלים תמונה אחת של הלידים, המשימות
             וההתקדמות העסקית - עם פעולה הבאה ברורה לכל ליד.
           </p>

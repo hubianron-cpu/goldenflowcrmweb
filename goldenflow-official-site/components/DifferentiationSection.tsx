@@ -27,14 +27,16 @@ export function DifferentiationSection() {
   return (
     <section className="section-pad border-y border-white/10 bg-white/[0.025]">
       <div className="container-shell">
-        <span className="eyebrow">בידול</span>
-        <h2 className="section-title">
-          זה לא CRM שמחכה שתזכור. זה CRM שמחזיר אותך לפעולה.
-        </h2>
-        <p className="section-copy">
-          GoldenFlow לא מבטיחה תוצאות ולא סוגרת במקומך. היא נותנת סדר, שליטה,
-          מעקב ופעולה בזמן - בדיוק במקום שבו לידים בדרך כלל נופלים.
-        </p>
+        <div className="section-heading">
+          <span className="eyebrow">בידול</span>
+          <h2 className="section-title">
+            זה לא CRM שמחכה שתזכור. זה CRM שמחזיר אותך לפעולה.
+          </h2>
+          <p className="section-copy">
+            GoldenFlow לא מבטיחה תוצאות ולא סוגרת במקומך. היא נותנת סדר, שליטה,
+            מעקב ופעולה בזמן - בדיוק במקום שבו לידים בדרך כלל נופלים.
+          </p>
+        </div>
 
         <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           {differences.map((item) => (

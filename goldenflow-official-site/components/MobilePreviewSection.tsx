@@ -3,8 +3,8 @@ import { MessageCircle, Phone, Smartphone } from "lucide-react";
 export function MobilePreviewSection() {
   return (
     <section className="section-pad border-y border-white/10 bg-white/[0.025]">
-      <div className="container-shell grid gap-10 lg:grid-cols-[.9fr_1.1fr] lg:items-center">
-        <div>
+      <div className="container-shell">
+        <div className="section-heading">
           <span className="eyebrow">
             <Smartphone size={16} aria-hidden="true" />
             Mobile CRM
@@ -16,7 +16,7 @@ export function MobilePreviewSection() {
           </p>
         </div>
 
-        <div className="mx-auto w-full max-w-sm">
+        <div className="mx-auto mt-10 w-full max-w-sm">
           <div className="rounded-[2rem] border border-gold-300/25 bg-ink-950 p-3 shadow-gold">
             <div className="rounded-[1.45rem] border border-white/10 bg-[#080808] p-4">
               <div className="mb-5 flex items-center justify-between">

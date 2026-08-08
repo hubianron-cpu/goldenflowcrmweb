@@ -1,5 +1,5 @@
-import { Check, MessageCircle } from "lucide-react";
-import { whatsappUrl } from "@/lib/constants";
+import { Check, LogIn } from "lucide-react";
+import { APP_LOGIN_URL } from "@/lib/constants";
 
 const included = [
   "ניהול לידים",
@@ -16,10 +16,10 @@ export function PricingSection() {
   return (
     <section id="pricing" className="section-pad">
       <div className="container-shell">
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="section-heading">
           <span className="eyebrow">מחיר השקה</span>
-          <h2 className="section-title mx-auto">מחיר השקה למשתמשים הראשונים</h2>
-          <p className="section-copy mx-auto">
+          <h2 className="section-title">מחיר השקה למשתמשים הראשונים</h2>
+          <p className="section-copy">
             תמחור פשוט ושקוף למי שרוצה להתחיל לעבוד עם GoldenFlow CRM בצורה מסודרת.
           </p>
         </div>
@@ -39,7 +39,7 @@ export function PricingSection() {
               </span>
             </div>
             <div className="mt-6 flex items-end justify-center gap-2 sm:justify-start">
-              <span className="text-5xl font-black text-white sm:text-6xl">₪97</span>
+              <span className="text-5xl font-black text-white sm:text-6xl">₪99</span>
               <span className="pb-3 text-lg font-bold text-zinc-300">לחודש</span>
             </div>
             <p className="microcopy mt-4">
@@ -53,13 +53,12 @@ export function PricingSection() {
                 </li>
               ))}
             </ul>
-            <a href={whatsappUrl} className="gold-button mt-8 w-full">
-              <MessageCircle size={18} aria-hidden="true" />
+            <a href={APP_LOGIN_URL} className="gold-button mt-8 w-full">
+              <LogIn size={18} aria-hidden="true" />
               רוצה לפתוח מנוי
             </a>
             <p className="mt-4 text-center text-xs leading-6 text-zinc-400">
-              המחיר מיועד למשתמשים הראשונים ועשוי להתעדכן בהמשך.
-            </p>
+מחיר ההשקה נשאר קבוע לכל החיים ל-20 הראשונים            </p>
           </div>
         </div>
       </div>

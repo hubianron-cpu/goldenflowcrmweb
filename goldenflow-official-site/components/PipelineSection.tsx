@@ -12,15 +12,13 @@ export function PipelineSection() {
   return (
     <section className="section-pad">
       <div className="container-shell">
-        <div className="grid gap-8 lg:grid-cols-[.9fr_1.1fr] lg:items-end">
-          <div>
-            <span className="eyebrow">
-              <Milestone size={16} aria-hidden="true" />
-              Sales Pipeline
-            </span>
-            <h2 className="section-title">לראות איפה כל כסף נמצא במסלול המכירה</h2>
-          </div>
-          <p className="section-copy lg:mt-0">
+        <div className="section-heading">
+          <span className="eyebrow">
+            <Milestone size={16} aria-hidden="true" />
+            Sales Pipeline
+          </span>
+          <h2 className="section-title">לראות איפה כל כסף נמצא במסלול המכירה</h2>
+          <p className="section-copy">
             GoldenFlow מציגה את שלבי המכירה בצורה ברורה, כדי לדעת מה חדש, איפה נוצר קשר,
             מה מחכה לפגישה ומה כבר התקדם להצעה.
           </p>

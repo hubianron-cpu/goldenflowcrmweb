@@ -20,12 +20,14 @@ export function BenefitsSection() {
   return (
     <section id="benefits" className="section-pad border-y border-white/10 bg-white/[0.025]">
       <div className="container-shell">
-        <span className="eyebrow">יתרונות</span>
-        <h2 className="section-title">לפני GoldenFlow הכול מפוזר. אחרי GoldenFlow יש פעולה ברורה.</h2>
-        <p className="section-copy">
-          המעבר המרכזי הוא לא רק מכלי אחד לכלי אחר, אלא מעבודה תגובתית לעבודה
-          עם סדר, עדיפות ופעולה ברורה.
-        </p>
+        <div className="section-heading">
+          <span className="eyebrow">יתרונות</span>
+          <h2 className="section-title">לפני GoldenFlow הכול מפוזר. אחרי GoldenFlow יש פעולה ברורה.</h2>
+          <p className="section-copy">
+            המעבר המרכזי הוא לא רק מכלי אחד לכלי אחר, אלא מעבודה תגובתית לעבודה
+            עם סדר, עדיפות ופעולה ברורה.
+          </p>
+        </div>
         <div className="mt-10 grid gap-4 lg:grid-cols-[1fr_auto_1fr] lg:items-stretch">
           <Comparison title="לפני GoldenFlow" items={before} icon="before" />
           <div className="hidden items-center justify-center px-3 lg:flex">

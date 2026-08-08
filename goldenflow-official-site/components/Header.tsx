@@ -1,15 +1,15 @@
 import Image from "next/image";
-import { Menu, MessageCircle } from "lucide-react";
-import { navItems, primaryCta, whatsappUrl } from "@/lib/constants";
+import { LogIn, Menu } from "lucide-react";
+import { APP_LOGIN_URL, navItems, primaryCta } from "@/lib/constants";
 
 export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-ink-950/78 backdrop-blur-2xl">
-      <div className="container-shell flex min-h-16 items-center justify-between gap-4">
-        <a href="#top" className="flex items-center gap-3" aria-label="GoldenFlow">
-          <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-gold-300/30 bg-ink-950/70 p-1.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
+      <div className="container-shell flex min-h-16 items-center justify-between gap-4 xl:gap-6">
+        <a href="#top" className="flex min-w-0 items-center gap-3" aria-label="GoldenFlow">
+          <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-gold-300/30 bg-ink-950/70 p-1 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] sm:h-11 sm:w-11">
             <Image
-              src="/brand/goldenflow-icon.png"
+              src="/brand/goldenflow-icon-gold.png"
               alt="GoldenFlow"
               width={128}
               height={128}
@@ -18,10 +18,10 @@ export function Header() {
               className="h-full w-full max-w-full object-contain"
             />
           </span>
-          <span className="text-lg font-black tracking-normal text-white sm:text-xl">GoldenFlow CRM</span>
+          <span className="truncate text-lg font-black tracking-normal text-white sm:text-xl">GoldenFlow CRM</span>
         </a>
 
-        <nav className="hidden items-center gap-6 lg:flex" aria-label="ניווט ראשי">
+        <nav className="hidden items-center gap-4 xl:gap-6 lg:flex" aria-label="ניווט ראשי">
           {navItems.map((item) => (
             <a
               key={item.href}
@@ -33,8 +33,8 @@ export function Header() {
           ))}
         </nav>
 
-        <a href={whatsappUrl} className="gold-button hidden lg:inline-flex">
-          <MessageCircle size={18} aria-hidden="true" />
+        <a href={APP_LOGIN_URL} className="gold-button hidden lg:inline-flex">
+          <LogIn size={18} aria-hidden="true" />
           {primaryCta}
         </a>
 
@@ -54,8 +54,8 @@ export function Header() {
                   {item.label}
                 </a>
               ))}
-              <a href={whatsappUrl} className="gold-button mt-3 w-full">
-                <MessageCircle size={18} aria-hidden="true" />
+              <a href={APP_LOGIN_URL} className="gold-button mt-3 w-full">
+                <LogIn size={18} aria-hidden="true" />
                 {primaryCta}
               </a>
             </nav>

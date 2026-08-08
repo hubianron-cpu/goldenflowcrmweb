@@ -17,8 +17,10 @@ export function HowItWorks() {
   return (
     <section id="how-it-works" className="section-pad border-y border-white/10 bg-white/[0.025]">
       <div className="container-shell">
-        <span className="eyebrow">איך זה עובד</span>
-        <h2 className="section-title">איך זה עובד בפועל?</h2>
+        <div className="section-heading">
+          <span className="eyebrow">איך זה עובד</span>
+          <h2 className="section-title">איך זה עובד בפועל?</h2>
+        </div>
         <div className="mt-10 grid gap-4 md:grid-cols-3">
           {steps.map((step, index) => (
             <article key={step.title} className="premium-card">
