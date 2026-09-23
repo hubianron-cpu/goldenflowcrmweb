@@ -7,7 +7,7 @@ import {
   TrendingUp,
 } from "lucide-react";
 import { APP_LOGIN_URL, primaryCta } from "@/lib/constants";
-import { VideoFrame } from "@/components/VideoFrame";
+import { BrandFilmFrame } from "@/components/BrandFilmFrame";
 
 const metrics = [
   { label: "לידים לטיפול היום", value: "6", tone: "text-gold-300" },
@@ -51,7 +51,7 @@ export function Hero() {
         }}
       />
       <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-l from-transparent via-gold-300/30 to-transparent" />
-      <div className="container-shell relative z-10 grid min-h-[calc(100vh-8rem)] items-start gap-10 pb-28 pt-10 lg:grid-cols-[1.02fr_.98fr] lg:gap-12 lg:pb-12 lg:pt-14">
+      <div className="container-shell relative z-10 grid min-h-[calc(100vh-8rem)] items-start gap-8 pb-28 pt-10 lg:grid-cols-[1.02fr_.98fr] lg:gap-x-12 lg:gap-y-8 lg:pb-12 lg:pt-14">
         <div className="mx-auto max-w-3xl text-center lg:mx-0 lg:pt-2 lg:text-right">
           <div className="eyebrow mx-auto justify-center text-center lg:mx-0">
             <Image
@@ -75,6 +75,11 @@ export function Hero() {
             GoldenFlow CRM מרכזת את הלידים, המשימות ותהליך המכירה שלך במקום אחד -
             ומראה לך בכל יום למי כדאי לפנות, מה הפעולה הבאה ואיפה הכסף מחכה לטיפול.
           </p>
+        </div>
+        <div className="w-full min-w-0 self-start lg:pt-2">
+          <BrandFilmFrame />
+        </div>
+        <div className="mx-auto w-full max-w-3xl text-center lg:mx-0 lg:text-right">
           <div className="mx-auto mt-6 grid max-w-md gap-3 sm:max-w-2xl sm:grid-cols-3 lg:mx-0">
             {["סדר יומי ברור", "מעקב אחרי כל ליד", "החלטות לפי נתונים"].map((item) => (
               <div key={item} className="flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3 py-2 text-center text-sm font-semibold text-zinc-200">
@@ -83,7 +88,7 @@ export function Hero() {
               </div>
             ))}
           </div>
-          <div className="mx-auto mt-8 grid max-w-md gap-4 sm:flex sm:max-w-none sm:flex-row sm:gap-3 lg:mx-0">
+          <div id="hero-cta-group" className="mx-auto mt-8 grid max-w-md gap-4 sm:flex sm:max-w-none sm:flex-row sm:gap-3 lg:mx-0">
             <a href={APP_LOGIN_URL} className="gold-button w-full sm:w-auto">
               {primaryCta}
               <ArrowLeft size={18} aria-hidden="true" />
@@ -96,12 +101,6 @@ export function Hero() {
           <p className="microcopy mx-auto mt-6 max-w-md text-center lg:mx-0 lg:text-right">
             בלי התחייבות - רק להבין אם זה מתאים לעסק שלך.
           </p>
-          <VideoFrame
-            src="/videos/goldenflow-daily-closing.mp4"
-            title="GoldenFlowCRM daily closing video"
-            placement="hero"
-            className="mt-7 lg:mx-auto"
-          />
           <div className="mx-auto mt-6 max-w-xl rounded-2xl border border-gold-300/20 bg-[#111111]/78 p-5 text-right shadow-[0_22px_70px_rgba(0,0,0,0.34),0_0_34px_rgba(212,175,55,0.08)] backdrop-blur sm:p-6 lg:mx-auto">
             <h2 className="text-base font-black text-white sm:text-lg">
               מה קורה אחרי שתשלח הודעה?
@@ -117,7 +116,7 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative lg:pt-16 xl:pt-20">
+        <div className="relative">
           <div className="absolute -inset-6 rounded-[2rem] bg-gold-300/12 blur-3xl" />
           <div className="glass-panel relative overflow-hidden rounded-lg p-3 sm:p-5">
             <div className="pointer-events-none absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-gold-300/10 to-transparent" />
